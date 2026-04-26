@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { ThemeToggle } from '@/components/ui/ThemeToggle'
 
 const FEATURES = [
   {
@@ -44,7 +45,10 @@ export default function LandingPage() {
 
       <nav className="landing-nav">
         <span className="landing-logo">tabless</span>
-        <Link href="/auth/login" className="nav-cta">Sign in →</Link>
+        <div className="nav-right">
+          <ThemeToggle />
+          <Link href="/auth/login" className="nav-cta">Sign in →</Link>
+        </div>
       </nav>
 
       <section className="hero-section">

@@ -1214,3 +1214,243 @@ textarea:focus {
   text-align: center;
   font-size: 13px;
 }
+
+/* ─── Dark mode ──────────────────────────────────────────────────────────── */
+.dark {
+  --purple-50:  #1E1B3A;
+  --purple-100: #2D2857;
+  --purple-200: #3D3870;
+  --purple-400: #7F77DD;
+  --purple-600: #9D97E8;
+  --purple-800: #BCBAF2;
+  --purple-900: #EEEDFE;
+
+  --teal-50:  #0D2420;
+  --teal-400: #3ECFA0;
+  --teal-600: #5DDBB0;
+  --teal-800: #A8EFD8;
+
+  --amber-50:  #2A1F0A;
+  --amber-600: #F6A843;
+  --amber-800: #FBD08A;
+
+  --gray-50:  #1E1E1C;
+  --gray-100: #2A2A28;
+  --gray-200: #3A3A38;
+  --gray-400: #888780;
+  --gray-600: #AEADA6;
+}
+
+.dark body {
+  background: #111110;
+  color: #E8E7E3;
+}
+
+/* Cards and surfaces */
+.dark .auth-card,
+.dark .checkin-form,
+.dark .streak-tracker,
+.dark .stats-card,
+.dark .blocker-trends,
+.dark .pricing-card,
+.dark .signout-card {
+  background: #1A1A18;
+  border-color: rgba(255,255,255,0.08);
+}
+
+.dark .pricing-card-pro {
+  background: #1E1B3A;
+  border-color: var(--purple-400);
+}
+
+/* Inputs */
+.dark input[type="text"],
+.dark input[type="email"],
+.dark input[type="password"],
+.dark .answer-area {
+  background: #1A1A18;
+  border-color: rgba(255,255,255,0.1);
+  color: #E8E7E3;
+}
+
+.dark input::placeholder,
+.dark .answer-area::placeholder { color: #555552; }
+
+.dark input:focus,
+.dark .answer-area:focus {
+  background: #222220;
+  border-color: var(--purple-400);
+  box-shadow: 0 0 0 3px rgba(127,119,221,0.15);
+}
+
+/* Nav + header */
+.dark .landing-nav { background: #111110; }
+.dark .dash-header  { border-color: rgba(255,255,255,0.06); }
+
+/* Sections */
+.dark .landing-section-alt { background: #161614; }
+.dark .hero-section         { border-color: rgba(255,255,255,0.06); }
+.dark .landing-section      { border-color: rgba(255,255,255,0.06); }
+.dark .section-rule         { border-color: rgba(255,255,255,0.06); }
+.dark .landing-footer       { border-color: rgba(255,255,255,0.06); }
+
+/* Text */
+.dark .hero-title,
+.dark .auth-title,
+.dark .feature-label,
+.dark .faq-q,
+.dark .step-text,
+.dark .stat-value,
+.dark .question-text,
+.dark .empty-title,
+.dark .signout-title,
+.dark .footer-cta-title { color: #E8E7E3; }
+
+.dark .hero-sub,
+.dark .auth-sub,
+.dark .feature-desc,
+.dark .faq-a,
+.dark .blocker-summary,
+.dark .history-text,
+.dark .stat-label,
+.dark .section-sub,
+.dark .empty-body,
+.dark .signout-sub,
+.dark .pricing-list li { color: #AEADA6; }
+
+.dark .hero-eyebrow,
+.dark .section-label,
+.dark .blocker-keywords-label,
+.dark .question-num,
+.dark .char-count,
+.dark .history-q,
+.dark .history-date,
+.dark .auth-switch,
+.dark .hero-note,
+.dark .streak-label,
+.dark .streak-sub,
+.dark .blocker-day { color: #666662; }
+
+/* Streak days */
+.dark .streak-day        { background: #222220; color: #555552; }
+.dark .streak-day.done   { background: #0D2420; color: var(--teal-800); }
+.dark .streak-day.today  { background: var(--purple-400); color: #111110; }
+.dark .streak-day.future { background: transparent; border-color: #2A2A28; }
+
+/* Buttons */
+.dark .btn-ghost {
+  border-color: rgba(255,255,255,0.1);
+  color: #AEADA6;
+}
+.dark .btn-ghost:hover { background: #222220; }
+
+.dark .btn-pricing-free {
+  border-color: rgba(255,255,255,0.12);
+  color: #E8E7E3;
+}
+.dark .btn-pricing-free:hover { background: #222220; }
+
+/* Auth mode toggle */
+.dark .auth-mode-toggle { background: #222220; }
+.dark .auth-mode-btn.active {
+  background: #2A2A28;
+  color: #E8E7E3;
+}
+.dark .auth-mode-btn { color: #555552; }
+
+/* Misc */
+.dark .done-banner {
+  background: #0D2420;
+  border-color: rgba(61,207,160,0.15);
+}
+.dark .done-banner p { color: var(--teal-600); }
+
+.dark .empty-history {
+  background: #1A1A18;
+  border-color: rgba(255,255,255,0.06);
+}
+
+.dark .history-row      { border-color: rgba(255,255,255,0.05); }
+.dark .history-dot      { background: var(--teal-400); }
+.dark .stat-row         { border-color: rgba(255,255,255,0.05); }
+.dark .feature-row      { border-color: rgba(255,255,255,0.05); }
+.dark .faq-row          { border-color: rgba(255,255,255,0.05); }
+.dark .section-rule     { border-color: rgba(255,255,255,0.06); }
+
+.dark .blocker-bar-track  { background: #222220; }
+.dark .blocker-chip {
+  background: #2A1F0A;
+  border-color: rgba(246,168,67,0.15);
+  color: var(--amber-800);
+}
+
+.dark .signout-icon       { background: #222220; color: #AEADA6; }
+.dark .signout-link-item  { background: #1A1A18; }
+.dark .signout-link-item:hover { background: #222220; }
+.dark .signout-link-title { color: #E8E7E3; }
+.dark .signout-divider    { border-color: rgba(255,255,255,0.06); }
+
+.dark .empty-first-run {
+  background: #1A1A18;
+  border-color: rgba(255,255,255,0.08);
+}
+
+.dark .dot { background: #2A2A28; }
+.dark .dot.active { background: var(--purple-400); }
+
+.dark .pricing-price,
+.dark .streak-num { color: #E8E7E3; }
+
+.dark .logo { color: #E8E7E3; }
+.dark .landing-logo { color: #E8E7E3; }
+.dark .nav-cta { color: var(--purple-400); }
+.dark .auth-link { color: var(--purple-400); }
+.dark .auth-forgot { color: var(--purple-400); }
+
+/* Footer CTA stays dark in both modes */
+.footer-cta { background: #1a1a18; }
+.dark .footer-cta { background: #0A0A09; }
+.dark .footer-cta .btn-hero-primary { background: #E8E7E3; color: #111110; }
+.dark .footer-cta .btn-hero-primary:hover { background: #ccc; }
+
+/* Theme toggle button */
+.theme-toggle {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-md);
+  border: 0.5px solid rgba(0,0,0,0.12);
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gray-600);
+  transition: background 0.12s, color 0.12s;
+  flex-shrink: 0;
+}
+
+.theme-toggle:hover { background: var(--gray-50); }
+
+.dark .theme-toggle {
+  border-color: rgba(255,255,255,0.1);
+  color: #AEADA6;
+}
+.dark .theme-toggle:hover { background: #222220; }
+
+.theme-toggle-placeholder {
+  width: 32px;
+  height: 32px;
+}
+
+/* Nav right group */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.dash-header-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}

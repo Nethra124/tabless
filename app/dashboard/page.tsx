@@ -7,6 +7,7 @@ import { EntryHistory } from '@/components/dashboard/EntryHistory'
 import { StatsCard } from '@/components/dashboard/StatsCard'
 import { BlockerTrends } from '@/components/dashboard/BlockerTrends'
 import { hasCheckedInToday } from '@/lib/streak'
+import { ThemeToggle } from '@/components/ui/ThemeToggle'
 import { CheckIn } from '@/types'
 
 export default async function DashboardPage() {
@@ -57,7 +58,10 @@ export default async function DashboardPage() {
     <main className="dashboard">
       <header className="dash-header">
         <span className="logo">tabless</span>
-        <a href="/auth/signout" className="btn-ghost">Sign out</a>
+        <div className="dash-header-right">
+          <ThemeToggle />
+          <a href="/auth/signout" className="btn-ghost">Sign out</a>
+        </div>
       </header>
 
       <div className="dash-body">
