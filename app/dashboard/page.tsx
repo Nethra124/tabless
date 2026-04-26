@@ -27,7 +27,13 @@ export default async function DashboardPage() {
     }
   )
 
-  const { data: { user } } = await supabase.auth.getUser()
+  let user
+  try {
+    const { data } = await supabase.auth.getUser()
+    user = data.user
+  } catch {
+    redirect('/auth/login')
+  }
   if (!user) redirect('/auth/login')
 
   const { data: checkins } = await supabase
